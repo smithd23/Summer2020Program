@@ -13,6 +13,7 @@ public class Challenge2V2 {
          Line();
 
      }
+     // this is the method that creates the line.
     public static void Line() {
         System.out.print("+");
         for(int dash=0; dash<9; dash++ ){
