@@ -1,5 +1,5 @@
 package com.company;
-
+//Daniel
 public class ReceiptVariable {
         public static void main(String[] args) {
 
