@@ -1,6 +1,6 @@
 package com.company;
 public class Kshape {
-    public static final int SIZE=8;
+    public static final int SIZE=25;
     public static void main(String[] args) {
         TopPart();
         BottomPart();
@@ -10,7 +10,7 @@ public class Kshape {
     }
     public static void TopPart(){
         char letter = 65;
-        for(byte count=SIZE; count<=SIZE; count--){
+        for(byte count=SIZE; count>=0; count--){
             for (byte count2 = 0; count2 <= count; count2++) {
                 System.out.print((char) (letter + count2) + " ");
 
