@@ -24,19 +24,34 @@ public class Challenge_Data_Type {
         int userNumber;
         double userDouble;
         String userString;
+        int index;
+
+
 
         System.out.println("Please enter an integer:");
         userNumber = Scan.nextInt();
+        Math.abs(userNumber);
 
         System.out.println("Please enter a double:");
         userDouble = Scan.nextDouble();
+        Math.abs(userDouble);
 
         System.out.println("Please enter a phrase:");
         userString = Scan.nextLine();
+        String begin=userString.substring(0);
+        begin = Scan.nextLine();
 
-        System.out.println(userNumber + i);
-        System.out.println("This is the double answer: \n %5.1f",userDouble , d);
-        System.out.println(userString+ s);
+
+
+        //here i am trying to fix the problem cause by just using next line
+        // i am going to try and use index or else it will cut out the first word
+
+
+//i am using absso we cant go negative
+        System.out.print(Math.abs(userNumber) + i);
+        System.out.printf("\n %1.1f", d + Math.abs(userDouble));
+        System.out.println("");
+        System.out.println(s+" " +begin);
 
 
 
