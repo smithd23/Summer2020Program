@@ -24,7 +24,7 @@ public class Challenge_Data_Type {
         int userNumber;
         double userDouble;
         String userString;
-        int index;
+
 
 
 
@@ -47,11 +47,11 @@ public class Challenge_Data_Type {
         // i am going to try and use index or else it will cut out the first word
 
 
-//i am using absso we cant go negative
-        System.out.print(Math.abs(userNumber) + i);
-        System.out.printf("\n %1.1f", d + Math.abs(userDouble));
+//i am using abs we cant go negative
+        System.out.printf("\n %3d " , Math.abs(userNumber) + i);
+        System.out.printf("\n %2.1f", d + Math.abs(userDouble));
         System.out.println("");
-        System.out.println(s+" " +begin);
+        System.out.print(" " + s+" " +begin);
 
 
 
