@@ -23,18 +23,20 @@ import java.util.*;
 //printf the total to the nearest whole number
 public class OperatorsChallenge {
 
+
     public static void main(String [] args) {
-        solve();
+        double mealPrice=0;
+        int tipPercent=0;
+        int taxRate=0;
+
+        solve(mealPrice, tipPercent, taxRate);
     }
 
-        public static void solve(){
+        public static void solve(double mealPrice, int tipPercent, int taxRate){
             Scanner input = new Scanner(System.in);
-            double mealPrice;
-            double tipPercent;
-            double taxRate;
+
 
 // i decided to switch int tippercent to a double because it wasnt functioning properly
-
 
             System.out.println("Please enter the price of your meal:");
             mealPrice = input.nextDouble();
@@ -44,9 +46,9 @@ public class OperatorsChallenge {
 
             System.out.println("Please enter your tax rate as an integer:");
             taxRate = input.nextInt();
-
-            double tipTotal = tipPercent / 100 * mealPrice;
-            double taxTotal = taxRate / 100 * mealPrice;
+//I fixed it so that it would work as ints, but made them into doubles in this line
+            double tipTotal = (double)tipPercent / 100 * mealPrice;
+            double taxTotal = (double)taxRate / 100 * mealPrice;
 
             double total = tipTotal + taxTotal + mealPrice;
             System.out.print("Your total price is: ");
