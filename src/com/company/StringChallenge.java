@@ -44,7 +44,7 @@ public class StringChallenge {
            T = input.nextInt();//this is the amount of words
       }while (T < 2 || T > 10);//limits the amount
           int l;//declares length
-              for (int i = 0; i < T; i++) {
+              for (int i = 0; i < T; i++) {//the for loop that runs this repeatedly for the amount of words
                   do {
                       System.out.println("Please enter your phrase: ");
                       Stringy = input.next();//reads next word
