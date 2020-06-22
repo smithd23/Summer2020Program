@@ -33,51 +33,40 @@ package com.company;
 //        }
 //        and in the main print the answers
 //        the end?
-
-
-
-
-  import java.util.*;
-
-
+import java.util.*;
 public class StringChallenge {
-
       public static void main(String[] args) {
           Scanner input = new Scanner(System.in);//brings in scanner
           String Stringy = " ";
-          int T;
-          do{
+          int T;//defines var T
+          do{//do while
           System.out.print("Please input the amount of words you are going to use. (Has to be between 2 and 10): ");
            T = input.nextInt();//this is the amount of words
-      }while (T < 2 && T > 10);//limits the amount
+      }while (T < 2 || T > 10);//limits the amount
           int l;//declares length
               for (int i = 0; i < T; i++) {
                   do {
                       System.out.println("Please enter your phrase: ");
                       Stringy = input.next();//reads next word
                       l = Stringy.length();//shorter abbreviation for easier use
-                  } while (l < 2 && l > 10000);//this limits the values to inbetween these 2 numbers
+                  } while (l < 2 || l > 10000);//this limits the values to inbetween these 2 numbers
                   String divide = divide(Stringy);
                   System.out.println(divide);//prints the answer
               }
           }
-
-
               //here i should print the method divided
-
-
               public static String divide(String Stringy) {//this allows string to come into this method
                   String even= " ";//initializes without really defining so less pressure
                   String odd= " ";
-                  char Evenletter;
+                  char Evenletter;//defining them here bc you cant in a for loop
                   char Oddletter;
                   for(int even2=0; even2<Stringy.length();even2+=2){//for loop equation
                        Evenletter=Stringy.charAt(even2);//
                        even=even+Evenletter;//this makes it so that the even variable will keep refreshing itself and growing for every different even letter
                   }
-                  for(int odd2=1; odd2<Stringy.length();odd2+=2) {
+                  for(int odd2=1; odd2<Stringy.length();odd2+=2) {//starts at 1 so it will be odd
                       Oddletter = Stringy.charAt(odd2);
-                      odd = odd + Oddletter;
+                      odd = odd + Oddletter;//same as even function but for odds
                   }
                   String done;
                   done = (even+" "+ odd);//this compiles the even numbers and the odds
