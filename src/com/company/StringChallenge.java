@@ -44,21 +44,21 @@ public class StringChallenge {
 
       public static void main(String[] args) {
           Scanner input = new Scanner(System.in);//brings in scanner
-          String userString = " ";
+          String Stringy = " ";
           int T;
           do{
           System.out.print("Please input the amount of words you are going to use. (Has to be between 2 and 10): ");
            T = input.nextInt();//this is the amount of words
       }while (T < 2 && T > 10);//limits the amount
-          int len;//declares length
+          int l;//declares length
               for (int i = 0; i < T; i++) {
                   do {
                       System.out.println("Please enter your phrase: ");
-                      userString = input.next();//reads next word
-                      len = userString.length();//shorter abbreviation for easier use
-                  } while (len < 2 && len > 10000);//this limits the values to inbetween these 2 numbers
-                  String divide = divide(userString);
-                  System.out.println(divide);
+                      Stringy = input.next();//reads next word
+                      l = Stringy.length();//shorter abbreviation for easier use
+                  } while (l < 2 && l > 10000);//this limits the values to inbetween these 2 numbers
+                  String divide = divide(Stringy);
+                  System.out.println(divide);//prints the answer
               }
           }
 
@@ -66,21 +66,21 @@ public class StringChallenge {
               //here i should print the method divided
 
 
-              public static String divide(String userString) {
-                  String even= " ";
+              public static String divide(String Stringy) {//this allows string to come into this method
+                  String even= " ";//initializes without really defining so less pressure
                   String odd= " ";
-                  char letter;
-                  char letter2;
-                  for(int evens=0; evens<userString.length();evens+=2){
-                       letter=userString.charAt(evens);
-                       even=even+letter;
+                  char Evenletter;
+                  char Oddletter;
+                  for(int even2=0; even2<Stringy.length();even2+=2){//for loop equation
+                       Evenletter=Stringy.charAt(even2);//
+                       even=even+Evenletter;//this makes it so that the even variable will keep refreshing itself and growing for every different even letter
                   }
-                  for(int odds=1; odds<userString.length();odds+=2) {
-                      letter2 = userString.charAt(odds);
-                      odd = odd + letter2;
+                  for(int odd2=1; odd2<Stringy.length();odd2+=2) {
+                      Oddletter = Stringy.charAt(odd2);
+                      odd = odd + Oddletter;
                   }
                   String done;
-                  done = (even+" "+ odd);
+                  done = (even+" "+ odd);//this compiles the even numbers and the odds
                   return done;//this returns it
               }
           }
