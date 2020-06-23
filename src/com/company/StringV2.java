@@ -30,7 +30,7 @@ public class StringV2 {
             } while (Stringy.length < 2 || Stringy.length > 10000);//this limits the values to inbetween these 2 numbers
 
         }
-
+//same as before
     //here i should print the method divided
     public static String divide(String Stringy) {//this allows string to come into this method
         String even= " ";//initializes without really defining so less pressure
